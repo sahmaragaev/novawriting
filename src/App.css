@@ -1,0 +1,83 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.api-status {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.api-status.checking {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.api-status.connected {
+  background: rgba(76, 175, 80, 0.9);
+  color: white;
+}
+
+.api-status.disconnected {
+  background: rgba(244, 67, 54, 0.9);
+  color: white;
+}
+
+.app-main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .app-main {
+    max-width: 100%;
+  }
+}

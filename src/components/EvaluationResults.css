@@ -1,0 +1,186 @@
+.evaluation-results {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.results-header h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.75rem;
+}
+
+.overall-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #646cff;
+}
+
+.result-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.band-score {
+  background: #646cff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.feedback-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feedback-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid #646cff;
+}
+
+.feedback-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.feedback-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.feedback-item ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.feedback-item li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.general-feedback {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #e8f4f8;
+  border-radius: 8px;
+  border: 2px solid #646cff;
+}
+
+.general-feedback h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.feedback-summary {
+  margin-bottom: 1rem;
+}
+
+.feedback-summary p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.recommendations {
+  margin-top: 1rem;
+}
+
+.recommendations strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.recommendations ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.recommendations li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.results-actions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
