@@ -51,47 +51,62 @@ export default function AnswerWriter({ question, statement, taskType, onEvaluati
 
   return (
     <div className="answer-writer">
-      <h2>Write Your Answer</h2>
-      
-      {statement && (
-        <div className="statement-box">
-          <h3>Statement</h3>
-          <p>{statement}</p>
-        </div>
-      )}
-
-      <div className="question-box">
-        <h3>Question</h3>
-        <p>{question}</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="answer-form">
-        <div className="form-group">
-          <label htmlFor="answer">
-            Your Answer
-            <span className="word-count">({wordCount} words)</span>
-          </label>
-          <textarea
-            id="answer"
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            placeholder="Write your essay answer here..."
-            rows={15}
-            className="answer-textarea"
-          />
-        </div>
-
-        {error && <div className="error-message">{error}</div>}
-
-        <div className="form-actions">
-          <button type="submit" disabled={loading || wordCount < 50} className="btn btn-primary">
-            {loading ? 'Evaluating...' : 'Submit for Evaluation'}
-          </button>
-          {wordCount < 50 && (
-            <span className="hint">Minimum 50 words required</span>
+      <div className="answer-writer-container">
+        <div className="question-panel">
+          <div className="question-header">
+            <h2>Writing Task 2</h2>
+            <div className="task-info">You should spend about 40 minutes on this task</div>
+          </div>
+          
+          {statement && (
+            <div className="statement-box">
+              <p className="statement-text">{statement}</p>
+            </div>
           )}
+
+          <div className="question-box">
+            <p className="question-text">{question}</p>
+          </div>
+
+          <div className="instructions">
+            <p>Write at least 250 words.</p>
+            <p>You should write your answer in the space provided on the right.</p>
+          </div>
         </div>
-      </form>
+
+        <div className="writing-panel">
+          <form onSubmit={handleSubmit} className="answer-form">
+            <div className="writing-header">
+              <label htmlFor="answer" className="writing-label">
+                Your Answer
+              </label>
+              <div className="word-count-badge">
+                <span className="word-count">{wordCount}</span>
+                <span className="word-label">words</span>
+              </div>
+            </div>
+            
+            <textarea
+              id="answer"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              placeholder="Write your essay here..."
+              className="answer-textarea"
+            />
+
+            {error && <div className="error-message">{error}</div>}
+
+            <div className="form-actions">
+              {wordCount < 50 && (
+                <span className="hint">Minimum 50 words required</span>
+              )}
+              <button type="submit" disabled={loading || wordCount < 50} className="btn btn-primary">
+                {loading ? 'Evaluating...' : 'Submit for Evaluation'}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
