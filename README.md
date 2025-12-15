@@ -1,12 +1,13 @@
 # NovaWriting - IELTS Writing Task 2 Practice App
 
-A modern React application for practicing IELTS Writing Task 2 with AI-powered question generation and evaluation.
+A clean, professional React application for practicing IELTS Writing Task 2 with AI-powered question generation and evaluation. Features an authentic IELTS-style interface with split-screen layout.
 
 ## Features
 
 - **Question Generation**: Generate IELTS Writing Task 2 questions with customizable task types and topics
-- **Answer Writing**: Write and edit your essay answers with real-time word count
-- **AI Evaluation**: Get detailed band scores and personalized feedback on your writing
+- **IELTS-Style Writing Interface**: Split-screen layout with question on the left and writing area on the right, matching the real IELTS test format
+- **Real-time Word Count**: Monitor your word count as you write
+- **AI Evaluation**: Get detailed band scores and personalized feedback on your writing across all IELTS criteria
 
 ## Setup
 
@@ -37,7 +38,11 @@ A modern React application for practicing IELTS Writing Task 2 with AI-powered q
 
 ## API Configuration
 
-The app expects the backend API to be running at `http://localhost:8081`. You can change this in `src/config.js` if needed.
+The app expects the backend API to be running at `http://localhost:8081`. 
+
+- In development, API requests are proxied through Vite to avoid CORS issues (configured in `vite.config.js`)
+- The API base URL can be changed in `src/config.js` if needed
+- API authentication is handled via the `X-API-Key` header
 
 ## Usage
 
@@ -47,10 +52,10 @@ The app expects the backend API to be running at `http://localhost:8081`. You ca
    - Click "Generate Question"
 
 2. **Write Your Answer**:
-   - Read the question and statement
-   - Write your essay in the text area
-   - Monitor your word count (minimum 50 words required)
-   - Click "Submit for Evaluation"
+   - Read the question and statement on the left panel
+   - Write your essay in the text area on the right panel
+   - Monitor your word count in real-time (minimum 50 words required for submission)
+   - Click "Submit for Evaluation" when ready
 
 3. **Review Results**:
    - View your overall band score
@@ -84,5 +89,6 @@ The built files will be in the `dist/` directory.
 ## Technologies Used
 
 - React 19
-- Vite
-- Modern CSS with gradients and animations
+- Vite (with proxy configuration for API requests)
+- Clean, professional CSS design
+- Responsive layout for mobile and desktop devices
